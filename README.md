@@ -72,10 +72,7 @@ class App extends Component {
     }
     // Funcioón booleana para las rutas del enrutador que requieren de autenticación
     isAuth() {
-        if (store.get('jwt')) {
-            return true;
-        }
-        return false;
+        return true;
     }
     render() {
         return (
