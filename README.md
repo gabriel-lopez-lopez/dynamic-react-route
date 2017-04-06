@@ -47,7 +47,7 @@ export const ROUTES_CONFIG = [
             {
                 path: '/pageTwo/:id/:action',
                 auth: true,
-                component: PageThree,
+                component: PageThree
             }
         ]
     },
