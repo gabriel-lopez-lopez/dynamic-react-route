@@ -1,22 +1,25 @@
 # dynamic-react-router
 Módulo para la creación dinámica de enrutadores basados en la versión 4.0.0 de [react-router](https://www.npmjs.com/package/react-router) a partir de un objeto o archivo de configuración (.js)
 
-## instalación
+## Instalación
 
 ```sh
     $ npm install --save dynamic-react-router
 ```
 
-## Ejemplo de uso:
+## Ejemplo de uso
+Código competo en [dynamic-react-route](https://github.com/gabriel-lopez-lopez/dynamic-react-route/tree/master/dynamic-react-router demo)
 
 **route.js**
 
 ```sh
 import NotFound from './Components/404';
 import Home from './Components/Home';
-import PageOne from './Components/Pages/pageone.js';
-import PageTwo from './Components/Pages/pagetwo.js';
-import PageThree from './Components/Pages/pagethree.js';
+import PageOne from './Components/Pages/pageOne';
+import PageTwo from './Components/Pages/pageTwo';
+import PageThree from './Components/Pages/pageThree';
+import PageThreeAdd from './Components/Pages/pageThreeAdd';
+import PageFour from './Components/Pages/pageFour';
 // Configuración del Router
 export const ROUTES_CONFIG = [
     // ROOT
@@ -35,19 +38,27 @@ export const ROUTES_CONFIG = [
     {
         path: '/pageTwo',
         pathExact: true,
-        auth: true,
         component: PageTwo
+    },
+    // PAGE 3
+    {
+        path: '/pageThree',
+        pathExact: true,
+        auth: true,
+        component: PageThree,
         routes: [
+            // PAGE 3/ADD
             {
-                path: '/pageTwo/add',
+                path: '/pageThree/add',
                 pathExact: true,
                 auth: true,
-                component: PageThree
+                component: PageThreeAdd
             },
+            // PAGE 4
             {
-                path: '/pageTwo/:id/:action',
+                path: '/pageFour/:id/:action',
                 auth: true,
-                component: PageThree
+                component: PageFour
             }
         ]
     },
@@ -61,18 +72,21 @@ export const ROUTES_CONFIG = [
 **app.js**
 
 ```sh
-import React, { createElement, Component } from 'react';
+import React, { Component } from 'react';
 import Layout from '../Layout';
-import DynamicReactRouter from './lib/dynamicReactRouter.js';
+import DynamicReactRouter from 'dynamic-react-router';
 // Configuración del Enrutador
-import { ROUTES_CONFIG } from './route';
+import { ROUTES_CONFIG } from '../../route';
 class App extends Component {
     constructor(props) {
         super(props);
     }
     // Funcioón booleana para las rutas del enrutador que requieren de autenticación
     isAuth() {
-        return true;
+        if (store.get('jwt')) {
+            return true;
+        }
+        return false;
     }
     render() {
         return (
@@ -88,7 +102,7 @@ export default App;
 ```sh
 import React from 'react';
 import { render } from 'react-dom';
-import App from './app.js';
+import App from './Components/App';
+import styles from './css/styles.css';
 render(<App />, document.getElementById('app'));
 ```
-
