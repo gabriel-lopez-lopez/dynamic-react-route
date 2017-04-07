@@ -8,7 +8,7 @@ Módulo para la creación dinámica de enrutadores basados en la versión 4.0.0 
 ```
 
 ## Ejemplo de uso
-Código competo en el directorio [dynamic-react-route demo](ttps://github.com/gabriel-lopez-lopez/dynamic-react-route/tree/master/dynamic-react-router%20demo)
+Código competo en el directorio [dynamic-react-route demo](https://github.com/gabriel-lopez-lopez/dynamic-react-route/tree/master/dynamic-react-router%20demo)
 
 **route.js**
 
