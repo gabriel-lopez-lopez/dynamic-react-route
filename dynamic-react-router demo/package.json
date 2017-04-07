@@ -1,0 +1,41 @@
+{
+  "name": "dynamic-react-router",
+  "version": "0.0.1",
+  "description": "Demo para el uso del módulo para la creación dinámica de enrutadores basados en la versión 4.0.0 de react-router a partir de un objeto o archivo de configuración (.js)",
+  "author": "Gabriel López López <gabriel.lopezlopez@hotmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabriel-lopez-lopez/dynamic-react-route.git"
+  },
+  "keywords": [
+    "react",
+    "react-router",
+    "dynamic-react-router"
+  ],
+  "readme": "README.md",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --content-base build/ --colors --progress"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^4.0.0",
+    "react-router-dom": "^4.0.0",
+    "dynamic-react-router": "^1.0.6"
+  },
+  "devDependencies": {
+    "babel-cli": "6.23.0",
+    "babel-loader": "6.4.0",
+    "babel-preset-env": "1.2.1",
+    "babel-preset-react": "6.23.0",
+    "css-loader": "^0.27.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "2.28.0",
+    "webpack": "2.2.1",
+    "webpack-dev-middleware": "1.10.1",
+    "webpack-dev-server": "2.4.1",
+    "webpack-hot-middleware": "2.17.1"
+  }
+}
