@@ -1,0 +1,27 @@
+{
+    "name": "dynamic-react-router",
+    "version": "1.0.0",
+    "description": "Módulo para la creación dinámica de enrutadores basados en la versión 4.0.0 de react-router a partir de un objeto o archivo de configuración (.js)",
+    "author": "Gabriel López López <gabriel.lopezlopez@hotmail.com>",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/gabriel-lopez-lopez/dynamic-react-route.git"
+    },
+    "keywords": [
+        "react",
+        "react-router",
+        "dynamic-react-router"
+    ],
+    "readme": "README.md",
+    "main": "index.js",
+    "dependencies": {
+        "react": "^15.4.2",
+        "react-dom": "^15.4.2",
+        "react-router": "^4.0.0",
+        "react-router-dom": "^4.0.0"
+    },
+    "engines": {
+        "node": ">= 0.6.12"
+    }
+}
